@@ -11,4 +11,5 @@ export default defineConfig(() => ({
       "@shared": path.resolve(process.cwd(), "./shared"),
     },
   },
+  base: './', // very important for relative paths
 }));

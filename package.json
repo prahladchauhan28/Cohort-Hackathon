@@ -12,7 +12,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:client && npm run build:server && npx vite build",
+    "build": "npm run build:client && npm run build:server && vite build",
+    "preview": "vite preview",
     "build:client": "vite build",
     "build:server": "vite build --config vite.config.server.js",
     "start": "node dist/server/node-build.mjs",
