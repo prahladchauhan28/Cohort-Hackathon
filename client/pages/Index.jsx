@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Navigation } from "@/components/Navigation";
+import  Navigation  from "../components/Navigation";
 import { Hero } from "@/components/Hero";
 import { About } from "./About";
 import { Players } from "./Players";

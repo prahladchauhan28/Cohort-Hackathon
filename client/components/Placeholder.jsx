@@ -1,10 +1,11 @@
-import { Navigation } from "./Navigation";
+import Navigation  from "./Navigation";
 import { Footer } from "../pages/Footer";
 
 export function Placeholder({ title, description }) {
   return (
-    <div className="min-h-screen bg-s8ul-dark">
+    <div>
       <Navigation />
+      <div className="min-h-screen  bg-s8ul-dark">
       <main className="pt-20 flex items-center justify-center min-h-screen">
         <div className="text-center px-4 sm:px-6 lg:px-8 max-w-2xl mx-auto">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -25,6 +26,7 @@ export function Placeholder({ title, description }) {
         </div>
             </main>
       <Footer />
+    </div>
     </div>
   );
 }

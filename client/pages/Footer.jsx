@@ -31,13 +31,13 @@ export function Footer() {
     { 
       name: "Twitter", 
       icon: X, 
-      href: "https://twitter.com/s8ul_esports",
+      href: "https://x.com/S8ulesports",
       color: "hover:text-white"
     },
     { 
       name: "LinkedIn", 
       icon: Linkedin, 
-      href: "https://linkedin.com/company/s8ul",
+      href: "https://www.linkedin.com/company/s8ul/people/",
       color: "hover:text-blue-400"
     },
     { 

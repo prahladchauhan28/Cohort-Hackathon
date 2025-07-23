@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
-import { useEffect } from "react";
+import Countup from "../components/Countup";
+
 
 export function Players() {
 
@@ -194,12 +195,7 @@ POKEMON_UNITE: [
 };
 
 
-  const stats = [
-    { value: "25+", label: "Pro Players", icon: "👤" },
-    { value: "250+", label: "Brand Partners", icon: "🤝" },
-    { value: "3x", label: "Esports Awards", icon: "🏆" },
-    { value: "1st", label: "MOBIES Global Impact", icon: "🌟" },
-  ];
+ 
 
   return (
     <section
@@ -312,24 +308,7 @@ POKEMON_UNITE: [
         </div>
 
         {/* Enhanced Team Stats */}
-        <div className="bg-gradient-to-r from-s8ul-dark-lighter/50 to-gray-800/30 backdrop-blur-sm rounded-3xl p-8 border border-s8ul-gray/20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="mb-4 text-4xl group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-                </div>
-                <div className="text-4xl lg:text-5xl font-black bg-gradient-to-r from-s8ul-green to-green-400 bg-clip-text text-transparent mb-3 group-hover:scale-105 transition-transform duration-300">
-                  {stat.value}
-                </div>
-                <div className="text-gray-300 font-medium text-lg">
-                  {stat.label}
-                </div>
-                <div className="w-12 h-1 bg-gradient-to-r from-s8ul-green to-transparent mx-auto mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            ))}
-          </div>
-        </div>
+        <Countup/>
       </div>
     </section>
   );

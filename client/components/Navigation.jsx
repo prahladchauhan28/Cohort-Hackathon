@@ -1,10 +1,11 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useNavigate } from "react-router-dom";
 
-export function Navigation({ className }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navigation = ({ className }) => {
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate= useNavigate();
 
@@ -20,9 +21,11 @@ export function Navigation({ className }) {
   const scrollToSection = (sectionId) => {
 
     if (sectionId === "shop") {
-      navigate("/shop");
+      // navigate("/shop");
+      // setIsMenuOpen(false);
+      // return; // Stop here, no scrolling needed
+      window.open("/shop", "_blank", "noopener,noreferrer");
       setIsMenuOpen(false);
-      return; // Stop here, no scrolling needed
     }
     const element = document.getElementById(sectionId);
     if (element) {
@@ -144,5 +147,9 @@ export function Navigation({ className }) {
         </div>
       </div>
     </nav>
-  );
+  )
 }
+
+export default Navigation
+
+
