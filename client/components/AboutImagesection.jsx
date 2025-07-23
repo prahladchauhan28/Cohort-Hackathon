@@ -19,10 +19,9 @@ const AboutImagesection = () => {
             {/* Floating Achievement Card */}
             <div className="absolute -bottom-8 -right-8 bg-gradient-to-br from-s8ul-green to-green-590 p-6 rounded-2xl shadow-2xl max-w-xs z-20 border border-s8ul-green/20">
               <div className="flex items-center space-x-3 mb-3">
-                {/* <div className="w-3 h-3 bg-white rounded-full animate-pulse" /> */}
-                {/* <span className="text-white font-bold text-sm">ACHIEVEMENT</span> */}
+              
                 </div> 
-              <p className="text-amber-200 text-sm font-medium leading-relaxed">
+              <p className="text-white text-sm font-medium leading-relaxed hover:animate-pulse transition-all duration-300">
                 "Onto the global map, known for their esports dominance, visionary 
                 leadership & innovative content creation."
               </p>

@@ -20,7 +20,7 @@ const SpotlightCard = () => {
                 title: "Championship Tournament",
                 description: "Latest tournament victories and upcoming matches",
                 image: "https://ik.imagekit.io/Prahlad2002/S8UL/media1.png?updatedAt=1753125937589",
-                gradient: "from-s8ul-green/20 to-green-600/20"
+                gradient: "from-s8ul-green/1 to-green-600/20"
               },
               {
                 title: "Team Announcements", 
@@ -42,7 +42,7 @@ const SpotlightCard = () => {
                     alt={card.title}
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-t ${card.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                  {/* <div className={`absolute inset-0 bg-gradient-to-t ${card.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} /> */}
                 </div>
                 <div className="p-6">
                   <h4 className="text-xl font-bold mb-3 text-white group-hover:text-s8ul-green transition-colors duration-300">

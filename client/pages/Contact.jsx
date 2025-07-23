@@ -9,41 +9,46 @@ export const Contact = () => {
       name: "Animesh Agarwal",
       role: "Founder & CEO",
       initials: "AA",
+      words: "Animesh Agarwal is the Founder and CEO of 8Bit Creatives, as well as the founder of S8UL, the country’s leading Esports and gaming content organization. S8UL serves as the parent organization of IQOO SOUL, a leading Esports organization in India. Animesh dons several hats as an entrepreneur, an ex-pro gamer, a monster energy Esports athlete, and a gaming & luxury lifestyle content creator. As a pioneer in the Indian Gaming Industry, the 28-year-old has a deep understanding of the industry and is dedicated to shaping the business of Esports in India. His Company, 8Bit Creatives is also achieving remarkable milestones in content creation and brand collaborations within the gaming sector.",
       image:
         "https://ik.imagekit.io/Prahlad2002/S8UL/animesh.webp?updatedAt=1753125932750",
-      linkedin: "https://linkedin.com/in/animesh",
+      linkedin: "https://www.linkedin.com/in/8bitthug/",
       insta: "https://instagram.com/animesh",
-      twitter: "https://twitter.com/animesh",
+      twitter: "https://x.com/8bit_thug",
     },
     {
       name: "Lokesh Jain",
       role: "Co-Founder",
       initials: "LJ",
+      words:
+        "Hailing from Delhi, Lokesh Jain is the co-founder of 8Bit Creatives and S8UL. With a background in business studies from Hong Kong, he has leveraged his expertise and experience to help both organizations grow by leaps and bounds within the gaming ecosystem. The 31-year-old entrepreneur’s gaming journey began in childhood with Nintendo and PlayStation, transitioning to mobile gaming with PUBG Mobile. Despite his professional commitments, he continues to engage in gaming and streaming casually and enjoys hobbies like billiards and car racing. His contributions through 8Bit Creatives and S8UL have been instrumental in nurturing talent and advancing Indian Esports, demonstrating that strategic and sustainable growth is key to success.",
       image:
         "https://ik.imagekit.io/Prahlad2002/S8UL/lokesh.webp?updatedAt=1753125937802",
-      linkedin: "https://linkedin.com/in/animesh",
+      linkedin: "https://www.linkedin.com/in/lokesh-goldy-jain-286a33253/",
       insta: "https://instagram.com/animesh",
-      twitter: "https://twitter.com/animesh",
+      twitter: "https://x.com/8bit__goldy",
     },
     {
       name: "Naman Mathur",
       role: "Co-Founder",
       initials: "NM",
+      words: "Widely known by his gaming alias Mortal, Naman Mathur is the Co-founder of S8UL and the face of Indian Esports. As the Co-founder, Mortal has been a driving force behind the organization's meteoric rise, channeling his experience and skillset to shape its strategic direction and growth within the vibrant Esports community of India. Mortal's illustrious career is marked by a string of remarkable achievements and accolades. The 27-year-old holds the distinction of being the only Indian Esports athlete to receive four nominations in the esteemed Esports Awards ,reflecting his immense impact and influence within the industry.",
       image:
         "https://ik.imagekit.io/Prahlad2002/S8UL/naman.webp?updatedAt=1753125940818",
-      linkedin: "https://linkedin.com/in/animesh",
+      linkedin: "https://www.linkedin.com/in/naman-mathur-b044b7249/",
       insta: "https://instagram.com/animesh",
-      twitter: "https://twitter.com/animesh",
+      twitter: "https://x.com/MortalxS8ul",
     },
     {
       name: "Sumit Sovasaria",
       role: "Strategic Advisor",
       initials: "SS",
+      words: "Sumit is a seasoned industrialist from Guwahati, and an esports enthusiast. Over the years, he has been a keen observer of the gaming and esports ecosystem. His strategic insights and experience in scaling businesses will play a crucial role as S8UL embarks on its next phase of growth.",
       image:
         "https://ik.imagekit.io/Prahlad2002/S8UL/sumit.jpg?updatedAt=1753125945151",
-      linkedin: "https://linkedin.com/in/animesh",
+      linkedin: "https://www.linkedin.com/company/s8ul/people/",
       insta: "https://instagram.com/animesh",
-      twitter: "https://twitter.com/animesh",
+      twitter: "https://x.com/S8ulesports",
     },
   ];
 

@@ -1,54 +1,3 @@
-// import { Linkedin, Instagram, X } from "lucide-react";
-
-// const TeamMemberCard = ({ name, role, initials, image, linkedin, insta, twitter }) => {
-//   return (
-//     <div className="group bg-gradient-to-br from-s8ul-dark-lighter to-gray-800/50 rounded-xl p-4 border border-s8ul-gray/20 hover:border-s8ul-green/30 transition-all duration-300 transform hover:scale-105">
-//       <div className="flex items-center space-x-3 mb-3">
-//         {/* Avatar */}
-//         <div className="w-12 h-12 bg-gradient-to-br from-s8ul-green to-green-600 rounded-full flex items-center justify-center font-bold text-white text-sm shadow-lg overflow-hidden">
-//           {image ? (
-//             <img
-//               src={image}
-//               alt={name}
-//               className="object-cover w-full h-full rounded-full"
-//             />
-//           ) : (
-//             <span>{initials}</span>
-//           )}
-//         </div>
-
-//         {/* Name and Role */}
-//         <div className="flex-1">
-//           <h4 className="text-white font-bold text-sm group-hover:text-s8ul-green transition-colors duration-300">
-//             {name}
-//           </h4>
-//           <p className="text-gray-400 text-xs">{role}</p>
-//         </div>
-//       </div>
-
-//       {/* Social Icons */}
-//       <div className="flex space-x-3">
-//         {twitter && (
-//           <a href={twitter} target="_blank" rel="noopener noreferrer">
-//             <X size={16} className="text-gray-400 hover:text-yellow-200 transition-colors duration-300" />
-//           </a>
-//         )}
-//         {linkedin && (
-//           <a href={linkedin} target="_blank" rel="noopener noreferrer">
-//             <Linkedin size={16} className="text-gray-400 hover:text-blue-400 transition-colors duration-300" />
-//           </a>
-//         )}
-//         {insta && (
-//           <a href={insta} target="_blank" rel="noopener noreferrer">
-//             <Instagram size={16} className="text-gray-400 hover:text-pink-300 transition-colors duration-300" />
-//           </a>
-//         )}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default TeamMemberCard;
 
 import { Linkedin, Instagram, X } from "lucide-react";
 
@@ -57,6 +6,7 @@ const TeamMemberCard = ({
   role,
   location,
   image,
+  words,
   followers,
   following,
   likes,
@@ -117,15 +67,7 @@ const TeamMemberCard = ({
         <div    style={{ display: 'flex', justifyContent: 'space-around', marginTop: '1rem' }} 
         className="grid mt-2 mb-20 text-center overflow-y-auto max-h-70 pr-2 text-white scrollbar-hide hover:scroll-auto">
           <p className="">
-            Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Iure laboriosam ipsum amet hic necessitatibus,
-            repudiandae fugit dolor itaque labore dolorum minima ex,
-            praesentium, ullam commodi distinctio. Voluptates nostrum id
-            recusandae magni repellat deserunt quam! Autem ducimus veritatis
-            quibusdam eaque sapiente. ipsum dolor sit amet consectetur,
-            adipisicing elit. Cum, ea? consectetur adipisicing elit. Quod est
-            doloribus nam accusantium deleniti. Ullam vitae deserunt natus
-            temporibus illum.
+            {words}
           </p>
         </div>
       </div>
