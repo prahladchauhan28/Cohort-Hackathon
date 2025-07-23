@@ -21,9 +21,8 @@ export function Footer() {
   const navigationLinks = [
     { name: "Home", id: "home" },
     { name: "About Us", id: "about" },
-    { name: "Shop", href: "#shop" },
-    { name: "Media", href: "#media" },
     { name: "Players", id: "players" },
+    { name: "Gallery", id: "gallery" }, 
     { name: "Contact Us", id: "contact" },
   ];
 
