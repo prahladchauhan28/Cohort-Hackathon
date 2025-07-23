@@ -3,10 +3,8 @@ import ContactInformation from "../components/ContactInformation";
 import ContactHead from "../components/ContactHead";
 import ContactForm from "../components/ContactForm";
 
-
-export  const Contact = () => {
-
-     const teamMembers = [
+export const Contact = () => {
+  const teamMembers = [
     {
       name: "Animesh Agarwal",
       role: "Founder & CEO",
@@ -114,28 +112,39 @@ export  const Contact = () => {
               </div>
             </div>
 
-           <ContactHead/>
+            <ContactHead />
 
             {/* Contact Information */}
-                 <ContactInformation/>
-            {/* Enhanced Team Member Cards */}
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {teamMembers.map((member, idx) => (
-                <TeamMemberCard key={idx} {...member} />
-              ))}
-            </div>
+            <ContactInformation />
           </div>
-
           {/* Right Side - Contact Form */}
           <div className="lg:col-span-1">
             <ContactForm />
           </div>
-
         </div>
       </div>
-    </section>
-  )
-}
+      {/* Enhanced Team Member Cards */}
+      <section className="bg-[#0f172a] text-s8ul-green px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+        <div className="max-w-7xl mx-auto text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Meet Our Founders
+          </h2>
+          <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+            Our leadership team is committed to driving innovation and achieving
+            excellence.
+          </p>
+        </div>
 
-export default Contact
+        <div className="w-full max-w-screen-2xl mx-auto">
+          <div className="flex flex-wrap justify-center lg:justify-between gap-6">
+            {teamMembers.map((member, index) => (
+              <TeamMemberCard key={index} {...member} />
+            ))}
+          </div>
+        </div>
+      </section>
+    </section>
+  );
+};
+
+export default Contact;
