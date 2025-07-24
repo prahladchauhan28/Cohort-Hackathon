@@ -108,6 +108,35 @@
     --s8ul-gray: 210 6% 25%;
   }
 }
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-x {
+  animation: moveGradient 4s ease-in-out infinite;
+  background-size: 300% 100%;
+}
+
+@keyframes subtleGlow {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.25);
+  }
+  50% {
+    text-shadow: 0 0 35px rgba(0, 255, 136, 0.4);
+  }
+}
+
+.animate-subtle-glow {
+  animation: subtleGlow 4s ease-in-out infinite;
+}
 
 @layer base {
   * {

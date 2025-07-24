@@ -84,10 +84,10 @@ export function Hero() {
                   .getElementById("about")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="group relative px-8 py-4 bg-gradient-to-r from-s8ul-green to-green-500 text-white font-bold text-lg rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-s8ul-green/25"
+              className="group relative px-8 py-4 border-s8ul-green bg-gradient-to-r from-s8ul-dark-lighter to-green-600 text-white font-bold text-lg rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-2xl "
             >
               <span className="relative z-10">Explore Our Journey</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-s8ul-green opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 border-s8ul-green bg-gradient-to-r from-green-600 to-s8ul-dark-lighter opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </button>
 
             <button
@@ -96,7 +96,7 @@ export function Hero() {
                   .getElementById("players")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="px-8 py-4 border-2 border-s8ul-green text-s8ul-green font-bold text-lg rounded-xl hover:bg-s8ul-green hover:text-white transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-4 border-2  text-white bg-gradient-to-r from-green-600  font-bold text-lg rounded-xl hover:bg-s8ul-green hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               Meet Our Champions
             </button>
