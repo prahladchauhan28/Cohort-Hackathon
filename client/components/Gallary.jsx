@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import imageData from "../assets/galleryImages.json"; // Assuming you have a data file with image URLs
+import imageData from "../assets/galleryImages.json";
+import TrueFocus from "./ui-comp/TrueFocus";
+
 const containerVariants = {
   hidden: { opacity: 0 },
   show: {
@@ -17,7 +19,10 @@ const Gallery = () => {
   const scrollableImages = imageData.slice(6);
 
   return (
-    <div id="gallery" className="relative min-h-screen bg-black text-white px-4 py-12 md:px-16 overflow-hidden">
+    <div
+      id="gallery"
+      className="relative min-h-screen bg-black text-white px-4 py-12 md:px-16 overflow-hidden"
+    >
       {/* 🔵 Animated Blobs Background */}
       <motion.div
         className="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden"
@@ -56,31 +61,38 @@ const Gallery = () => {
       </motion.div>
 
       {/* 🎯 Title */}
-         <motion.div
-      initial={{ opacity: 0, y: -30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="text-center mb-10 z-10 relative"
-    >
-      <motion.h2
-        whileHover={{ scale: 1.05, color: "#14FFEC" }}
-        transition={{ type: "spring", stiffness: 300 }}
-        className="text-4xl md:text-5xl font-extrabold text-s8ul-green transition-all duration-300 hover:drop-shadow-[0_4px_10px_rgba(20,255,236,0.4)]"
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="text-center mb-10 z-10 relative"
       >
-        S8UL Gallery
-      </motion.h2>
+        <TrueFocus
+          sentence="S8UL Gallery"
+          manualMode={false}
+          blurAmount={5}
+          borderColor="#14FFEC"
+          animationDuration={2}
+          pauseBetweenAnimations={1}
+        />
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-        className="text-lg text-gray-400 italic mt-2 transition duration-300 hover:text-s8ul-green"
-      >
-        Where passion meets pixels — witness the legacy of S8UL unfold.
-      </motion.p>
-    </motion.div>
-  
-      
+        {/* <motion.h2
+          whileHover={{ scale: 1.05, color: "#14FFEC" }}
+          transition={{ type: "spring", stiffness: 300 }}
+          className="text-4xl md:text-5xl font-extrabold text-s8ul-green transition-all duration-300 hover:drop-shadow-[0_4px_10px_rgba(20,255,236,0.4)]"
+        >
+          S8UL Gallery
+        </motion.h2> */}
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          className="text-lg text-gray-400 italic mt-2 transition duration-300 "
+        >
+          Where passion meets pixels — witness the legacy of S8UL unfold.
+        </motion.p>
+      </motion.div>
 
       {/* 🔳 Grid (First 6 Images) */}
       <motion.div
@@ -102,7 +114,6 @@ const Gallery = () => {
               alt={`gallery-${index}`}
               className="w-full h-64 object-cover transition duration-300 ease-in-out group-hover:brightness-75"
             />
-            
           </motion.div>
         ))}
       </motion.div>
@@ -110,9 +121,9 @@ const Gallery = () => {
       {/* 📜 Scrollable Row */}
       {scrollableImages.length > 0 && (
         <div className="mt-12 z-10 relative">
-<h3 className="text-3xl font-bold mb-6 text-s8ul-green tracking-wide relative inline-block after:block after:h-[3px] after:w-full after:bg-s8ul-green after:mt-1">
-  More Images
-</h3>
+          <h3 className="text-3xl font-bold mb-6 text-s8ul-green tracking-wide relative inline-block after:block after:h-[3px] after:w-full after:bg-s8ul-green after:mt-1">
+            More Images
+          </h3>
           <div className="flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 pb-4">
             {scrollableImages.map((img, index) => (
               <motion.div

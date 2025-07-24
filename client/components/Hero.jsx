@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import FloatingElement from "./FloatingElement";
+import GradientText from "./ui-comp/GradientText";
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -113,8 +114,25 @@ export function Hero() {
 
           {/* Subtitle with animation */}
           <div className="mb-8 space-y-4">
-            <p className="text-xl sm:text-3xl lg:text-4xl text-transparent bg-gradient-to-r from-s8ul-green to-green-400 bg-clip-text font-semibold">
+            {/* <p className="text-xl sm:text-3xl lg:text-4xl text-transparent bg-gradient-to-r from-s8ul-green to-green-400 bg-clip-text font-semibold">
+              <GradientText
+                colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+                animationSpeed={2}
+                showBorder={false}
+                className="custom-class"
+              >
               Leading the Gaming Revolution
+                
+              </GradientText>
+            </p> */}
+            <p className="text-xl sm:text-3xl lg:text-4xl font-semibold text-center">
+              <GradientText
+                colors={["#40ffaa", "#4079ff", "#40ffaa"]}
+                animationSpeed={2}
+                className="block"
+              >
+                Leading the Gaming Revolution
+              </GradientText>
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-s8ul-green to-transparent mx-auto" />
           </div>
