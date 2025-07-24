@@ -83,7 +83,7 @@ const Gallery = () => {
         >
           S8UL Gallery
         </motion.h2> */}
-
+        
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -121,10 +121,10 @@ const Gallery = () => {
       {/* 📜 Scrollable Row */}
       {scrollableImages.length > 0 && (
         <div className="mt-12 z-10 relative">
-          <h3 className="text-3xl font-bold mb-6 text-s8ul-green tracking-wide relative inline-block after:block after:h-[3px] after:w-full after:bg-s8ul-green after:mt-1">
+          <h3 className="text-3xl font-bold mb-6 text-gray-300 tracking-wide relative inline-block after:block after:h-[3px] after:w-full after:bg-s8ul-green after:mt-1">
             More Images
           </h3>
-          <div className="flex gap-4 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500 pb-4">
+          <div className="flex gap-4 overflow-x-auto scrollbar-hide pb-4">
             {scrollableImages.map((img, index) => (
               <motion.div
                 key={index}

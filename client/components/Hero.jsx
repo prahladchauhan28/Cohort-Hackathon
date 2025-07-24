@@ -2,49 +2,10 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import FloatingElement from "./FloatingElement";
 import GradientText from "./ui-comp/GradientText";
+import BlurText from "./ui-comp/BuildKeyFrames";
+import CircularText from "./ui-comp/RotationTransition";
 
 export function Hero() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    {
-      id: 1,
-      image:
-        "https://ik.imagekit.io/Prahlad2002/S8UL/slider3.webp?updatedAt=1753125942777",
-      title: "Championship Victory",
-      description: "S8UL dominates the esports scene",
-    },
-    {
-      id: 2,
-      image:
-        "https://ik.imagekit.io/Prahlad2002/S8UL/slider9.webp?updatedAt=1753125944585",
-      title: "Team Unity",
-      description: "Together we conquer",
-    },
-    {
-      id: 3,
-      image:
-        "https://ik.imagekit.io/Prahlad2002/S8UL/slider2.jpg?updatedAt=1753125942151",
-      title: "Tournament Champions",
-      description: "Leading the gaming revolution",
-    },
-    {
-      id: 4,
-      image:
-        "https://ik.imagekit.io/Prahlad2002/S8UL/slider10.png?updatedAt=1753125945041",
-      title: "Tournament Champions",
-      description: "Leading the gaming revolution",
-    },
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
   const ParticleField = () => (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {Array.from({ length: 100 }).map((_, i) => (
@@ -61,36 +22,15 @@ export function Hero() {
       ))}
     </div>
   );
+  const handleAnimationComplete = () => {
+    console.log("Animation completed!");
+  };
 
   return (
     <section
       id="home"
       className="relative h-screen overflow-hidden bg-gradient-to-br from-s8ul-dark via-gray-900 to-black"
     >
-      <div className="absolute inset-0 h-screen w-screen">
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={cn(
-              "absolute inset-0 transition-all duration-1000 ease-in-out",
-              index === currentSlide
-                ? "opacity-100 scale-100 z-10"
-                : "opacity-0 scale-105 z-0",
-            )}
-          >
-            {/* Slide Image */}
-            {/* <img
-              src={slide.image}
-              alt={slide.title}
-              className="w-full h-full object-cover object-center"
-            /> */}
-
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-          </div>
-        ))}
-      </div>
-
       {/* Particle Field */}
       <ParticleField />
 
@@ -114,17 +54,6 @@ export function Hero() {
 
           {/* Subtitle with animation */}
           <div className="mb-8 space-y-4">
-            {/* <p className="text-xl sm:text-3xl lg:text-4xl text-transparent bg-gradient-to-r from-s8ul-green to-green-400 bg-clip-text font-semibold">
-              <GradientText
-                colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-                animationSpeed={2}
-                showBorder={false}
-                className="custom-class"
-              >
-              Leading the Gaming Revolution
-                
-              </GradientText>
-            </p> */}
             <p className="text-xl sm:text-3xl lg:text-4xl font-semibold text-center">
               <GradientText
                 colors={["#40ffaa", "#4079ff", "#40ffaa"]}
@@ -175,27 +104,11 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Enhanced Slide Indicators */}
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={cn(
-              "w-3 h-3 rounded-full transition-all duration-300 border-2",
-              index === currentSlide
-                ? "bg-s8ul-green border-s8ul-green scale-125 shadow-lg shadow-s8ul-green/50"
-                : "bg-transparent border-white/50 hover:border-white/75 hover:scale-110",
-            )}
-          />
-        ))}
-      </div> */}
-
       {/* Scroll Indicator */}
       <div className="fixed bottom-8 right-8 text-white hidden lg:block z-50">
         <div className="flex flex-col items-center space-y-2 animate-bounce">
           <span className="text-xl  font-extrabold tracking-wide text-s8ul-green">
-            S8UL
+           S8UL
           </span>
           <div className="w-px h-8 bg-gradient-to-b from-white to-transparent" />
           <div className="w-2 h-2 bg-s8ul-green rounded-full" />

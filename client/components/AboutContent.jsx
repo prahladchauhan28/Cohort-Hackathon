@@ -56,8 +56,8 @@ const AboutContent = () => {
 
             <div className="pt-4">
               <button className="group relative px-8 py-4 border-2 border-s8ul-green  bg-gradient-to-br from-s8ul-green to-green-590 font-bold text-lg rounded-xl overflow-hidden transition-all duration-300 transform hover:scale-105">
-                <span className="relative z-10 group-hover:text-black transition-colors duration-300">Explore More</span>
-                <div className="absolute inset-0 bg-s8ul-green transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <span className="relative z-10 group-hover:text-white  to-s8ul-green transition-colors duration-300">Explore More</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600 transform scale-x-0  group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </button>
             </div>
           </div>
