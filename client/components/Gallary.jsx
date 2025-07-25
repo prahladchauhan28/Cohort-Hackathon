@@ -75,14 +75,6 @@ const Gallery = () => {
           animationDuration={2}
           pauseBetweenAnimations={1}
         />
-
-        {/* <motion.h2
-          whileHover={{ scale: 1.05, color: "#14FFEC" }}
-          transition={{ type: "spring", stiffness: 300 }}
-          className="text-4xl md:text-5xl font-extrabold text-s8ul-green transition-all duration-300 hover:drop-shadow-[0_4px_10px_rgba(20,255,236,0.4)]"
-        >
-          S8UL Gallery
-        </motion.h2> */}
         
         <motion.p
           initial={{ opacity: 0 }}

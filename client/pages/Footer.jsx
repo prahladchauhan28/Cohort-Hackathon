@@ -22,28 +22,28 @@ export function Footer() {
     { name: "Home", id: "home" },
     { name: "About Us", id: "about" },
     { name: "Players", id: "players" },
-    { name: "Gallery", id: "gallery" }, 
+    { name: "Gallery", id: "gallery" },
     { name: "Contact Us", id: "contact" },
   ];
 
   const socialLinks = [
-    { 
-      name: "Twitter", 
-      icon: X, 
+    {
+      name: "Twitter",
+      icon: X,
       href: "https://x.com/S8ulesports",
-      color: "hover:text-white"
+      color: "hover:text-white",
     },
-    { 
-      name: "LinkedIn", 
-      icon: Linkedin, 
+    {
+      name: "LinkedIn",
+      icon: Linkedin,
       href: "https://www.linkedin.com/company/s8ul/people/",
-      color: "hover:text-blue-400"
+      color: "hover:text-blue-400",
     },
-    { 
-      name: "Instagram", 
-      icon: Instagram, 
-      href: "https://instagram.com/s8ul.gg",
-      color: "hover:text-pink-400"
+    {
+      name: "Instagram",
+      icon: Instagram,
+      href: "https://www.instagram.com/s8ul.esports/",
+      color: "hover:text-pink-400",
     },
   ];
 
@@ -64,7 +64,7 @@ export function Footer() {
             }}
           />
         ))}
-        
+
         {/* Gradient orbs */}
         <div className="absolute top-20 left-20 w-64 h-64 bg-s8ul-green/5 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-20 w-48 h-48 bg-purple-500/5 rounded-full blur-2xl" />
@@ -77,16 +77,18 @@ export function Footer() {
             {/* Logo */}
             <div className="flex items-center space-x-4">
               <div className="w-16 h-16  rounded-2xl flex items-center justify-center shadow-2xl">
-                <img 
+                <img
                   src="https://ik.imagekit.io/Prahlad2002/S8UL/logo.webp?updatedAt=1753125937296"
                   alt="S8UL Logo"
                   className="w-18 h-18 object-contain"
                   onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'block';
+                    e.target.style.display = "none";
+                    e.target.nextSibling.style.display = "block";
                   }}
                 />
-                <span className="text-white font-black text-lg hidden">S8UL</span>
+                <span className="text-white font-black text-lg hidden">
+                  S8UL
+                </span>
               </div>
               <div>
                 <h3 className="text-2xl font-black pt-0 text-white">S8UL</h3>
@@ -96,15 +98,16 @@ export function Footer() {
 
             {/* Description */}
             <p className="text-gray-300 text-lg leading-relaxed max-w-md">
-              S8UL is a global name in esports and gaming content, headquartered in Mumbai, India.
+              S8UL is a global name in esports and gaming content, headquartered
+              in Mumbai, India.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-s8ul-green" />
-                <a 
-                  href="mailto:connect@s8ul.gg" 
+                <a
+                  href="mailto:connect@s8ul.gg"
                   className="text-gray-300 hover:text-s8ul-green transition-colors duration-300"
                 >
                   connect@s8ul.gg
@@ -138,9 +141,7 @@ export function Footer() {
 
           {/* About S8UL */}
           <div className="space-y-6">
-            <h4 className="text-xl font-bold text-white mb-6">
-              About S8UL
-            </h4>
+            <h4 className="text-xl font-bold text-white mb-6">About S8UL</h4>
             <nav className="space-y-3">
               {navigationLinks.map((link) => (
                 <div key={link.name}>
@@ -166,11 +167,10 @@ export function Footer() {
 
           {/* Subscribe */}
           <div className="space-y-6">
-            <h4 className="text-xl font-bold text-white mb-6">
-              Subscribe
-            </h4>
+            <h4 className="text-xl font-bold text-white mb-6">Subscribe</h4>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Don't miss to subscribe to our new feeds, kindly fill the form below.
+              Don't miss to subscribe to our new feeds, kindly fill the form
+              below.
             </p>
             <form onSubmit={handleSubscribe} className="space-y-4">
               <div className="relative">
@@ -203,13 +203,22 @@ export function Footer() {
 
             {/* Additional Links */}
             <div className="flex space-x-6 text-sm">
-              <a href="#privacy" className="text-gray-400 hover:text-s8ul-green transition-colors duration-300">
+              <a
+                href="#privacy"
+                className="text-gray-400 hover:text-s8ul-green transition-colors duration-300"
+              >
                 Privacy Policy
               </a>
-              <a href="#terms" className="text-gray-400 hover:text-s8ul-green transition-colors duration-300">
+              <a
+                href="#terms"
+                className="text-gray-400 hover:text-s8ul-green transition-colors duration-300"
+              >
                 Terms of Service
               </a>
-              <a href="#cookies" className="text-gray-400 hover:text-s8ul-green transition-colors duration-300">
+              <a
+                href="#cookies"
+                className="text-gray-400 hover:text-s8ul-green transition-colors duration-300"
+              >
                 Cookie Policy
               </a>
             </div>

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+
   /**
    * Tailwind CSS theme
    * tailwind.config.ts expects the following color variables to be expressed as HSL values.
@@ -51,7 +52,7 @@
 
     --sidebar-accent-foreground: 240 5.9% 10%;
 
-        --sidebar-border: 220 13% 91%;
+    --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
 
@@ -63,7 +64,7 @@
     --s8ul-gray: 210 6% 25%;
   }
 
-    .dark {
+  .dark {
     --background: 210 11% 7%;
     --foreground: 210 40% 98%;
 
@@ -97,7 +98,7 @@
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
-        --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* S8UL Gaming Theme - Dark Mode */
@@ -108,13 +109,16 @@
     --s8ul-gray: 210 6% 25%;
   }
 }
+
 @keyframes moveGradient {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -126,9 +130,12 @@
 }
 
 @keyframes subtleGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     text-shadow: 0 0 20px rgba(0, 255, 136, 0.25);
   }
+
   50% {
     text-shadow: 0 0 35px rgba(0, 255, 136, 0.4);
   }
@@ -143,12 +150,13 @@
     @apply border-border;
   }
 
-    body {
+  body {
     @apply bg-background text-foreground;
   }
 }
 
 @layer utilities {
+
   /* S8UL Gaming Animations */
   .animate-fade-in {
     animation: fadeIn 1s ease-out;
@@ -211,6 +219,7 @@
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -218,9 +227,12 @@
   }
 
   @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-20px);
     }
@@ -230,6 +242,7 @@
     from {
       box-shadow: 0 0 20px hsl(var(--s8ul-green) / 0.2);
     }
+
     to {
       box-shadow: 0 0 30px hsl(var(--s8ul-green) / 0.4), 0 0 40px hsl(var(--s8ul-green) / 0.2);
     }
@@ -240,6 +253,7 @@
       opacity: 0;
       transform: translateY(50px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -251,6 +265,7 @@
       opacity: 0;
       transform: scale(0.8);
     }
+
     to {
       opacity: 1;
       transform: scale(1);
@@ -259,12 +274,10 @@
 
   /* Gradient Text Animation */
   .text-gradient-animate {
-    background: linear-gradient(
-      270deg,
-      hsl(var(--s8ul-green)),
-      hsl(var(--s8ul-green-light)),
-      hsl(var(--s8ul-green))
-    );
+    background: linear-gradient(270deg,
+        hsl(var(--s8ul-green)),
+        hsl(var(--s8ul-green-light)),
+        hsl(var(--s8ul-green)));
     background-size: 400% 400%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -276,9 +289,11 @@
     0% {
       background-position: 0% 50%;
     }
+
     50% {
       background-position: 100% 50%;
     }
+
     100% {
       background-position: 0% 50%;
     }

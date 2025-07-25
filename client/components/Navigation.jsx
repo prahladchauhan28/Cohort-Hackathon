@@ -74,7 +74,9 @@ const Navigation = ({ className }) => {
                   onClick={() => scrollToSection(item.id)}
                   className="group relative px-6 py-3 text-gray-300 hover:text-white font-medium transition-all duration-300 rounded-xl hover:bg-s8ul-green/10"
                 >
-                  <span className="flex items-center space-x-2">{item.name}</span>
+                  <span className="flex items-center space-x-2">
+                    {item.name}
+                  </span>
                   <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-s8ul-green to-green-400 transition-all duration-300 group-hover:w-8" />
                 </button>
               ))}
@@ -99,7 +101,9 @@ const Navigation = ({ className }) => {
                   size={24}
                   className={cn(
                     "absolute inset-0 transition-all duration-300",
-                    isMenuOpen ? "rotate-0 opacity-100" : "-rotate-90 opacity-0",
+                    isMenuOpen
+                      ? "rotate-0 opacity-100"
+                      : "-rotate-90 opacity-0",
                   )}
                 />
               </div>

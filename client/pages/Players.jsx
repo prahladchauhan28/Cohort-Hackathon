@@ -2,200 +2,215 @@ import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import Countup from "../components/ui-comp/Countup";
 
-
 export function Players() {
-
   const [activeGame, setActiveGame] = useState("CODM");
-  
-    
 
   const games = [
     { id: "CODM", name: "CODM", color: "from-red-500 to-orange-500" },
     { id: "VALORANT", name: "VALORANT", color: "from-red-600 to-pink-500" },
     { id: "BGMI", name: "BGMI", color: "from-blue-500 to-green-500" },
-    { id: "POKEMON_UNITE", name: "POKEMON UNITE",color: "from-yellow-500 to-orange-500"},
+    {
+      id: "POKEMON_UNITE",
+      name: "POKEMON UNITE",
+      color: "from-yellow-500 to-orange-500",
+    },
   ];
 
   const players = {
-  CODM: [
-    {
-      name: "Samruddha Ghadge",
-      gamertag: "Jokos",
-      image:
-        "https://ik.imagekit.io/Prahlad2002/S8UL/codm1.png?updatedAt=1753125936763",
-    },
-    {
-      name: "Rishi Dubey",
-      gamertag: "Bunnz",
-      image:
-        "https://ik.imagekit.io/Prahlad2002/S8UL/codm2.png?updatedAt=1753125936841",
-    },
-    {
-      name: "Chiranthan Shetty",
-      gamertag: "Itsumo",
-      image:
-        "https://ik.imagekit.io/Prahlad2002/S8UL/codm5.png?updatedAt=1753125936866",
-    },
-    {
-      name: "Samartha Ghadge",
-      gamertag: "Sams",
-      image:
-        "https://ik.imagekit.io/Prahlad2002/S8UL/codm4.png?updatedAt=1753125936821",
-    },
-    {
-      name: "Zeel Patel",
-      gamertag: "Neutron",
-      image:
-        "https://ik.imagekit.io/Prahlad2002/S8UL/codm3.png?updatedAt=1753125936784",
-    },
-    {
-      name: "C.Glenn Varshan",
-      gamertag: "Ghost",
-      image:
-        "https://ik.imagekit.io/Prahlad2002/S8UL/codm6.png?updatedAt=1753125936820",
-    },
-  ],
-  VALORANT: [
-  {
-    name: "Sagnik Roy",
-    gamertag: "Phoenix",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/valorant1.png?updatedAt=1753125945466",
-    role: "Duelist",
-  },
-  {
-    name: "Sharvana Kumar Sahoo",
-    gamertag: "Sage",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/valorant2.png?updatedAt=1753125945899",
-    role: "Sentinel",
-  },
-  {
-    name: "Bryston Tan",
-    gamertag: "Sova",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/valorant3.png?updatedAt=1753125946003",
-    role: "Initiator",
-  },
-  {
-    name: "Muhummad Axel Syahbanna Dadan",
-    gamertag: "Brimstone",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/valorant4.png?updatedAt=1753125946404",
-    role: "Controller",
-  },
-  {
-    name: "Nathan Mascarenhas",
-    gamertag: "Omen",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/valorant5.png?updatedAt=1753125946026",
+    CODM: [
+      {
+        name: "Samruddha Ghadge",
+        gamertag: "Jokos",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/codm1.png?updatedAt=1753125936763",
+      },
+      {
+        name: "Rishi Dubey",
+        gamertag: "Bunnz",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/codm2.png?updatedAt=1753125936841",
+      },
+      {
+        name: "Chiranthan Shetty",
+        gamertag: "Itsumo",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/codm5.png?updatedAt=1753125936866",
+      },
+      {
+        name: "Samartha Ghadge",
+        gamertag: "Sams",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/codm4.png?updatedAt=1753125936821",
+      },
+      {
+        name: "Zeel Patel",
+        gamertag: "Neutron",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/codm3.png?updatedAt=1753125936784",
+      },
+      {
+        name: "C.Glenn Varshan",
+        gamertag: "Ghost",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/codm6.png?updatedAt=1753125936820",
+      },
+    ],
+    VALORANT: [
+      {
+        name: "Sagnik Roy",
+        gamertag: "Phoenix",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/valorant1.png?updatedAt=1753125945466",
+        role: "Duelist",
+      },
+      {
+        name: "Sharvana Kumar Sahoo",
+        gamertag: "Sage",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/valorant2.png?updatedAt=1753125945899",
+        role: "Sentinel",
+      },
+      {
+        name: "Bryston Tan",
+        gamertag: "Sova",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/valorant3.png?updatedAt=1753125946003",
+        role: "Initiator",
+      },
+      {
+        name: "Muhummad Axel Syahbanna Dadan",
+        gamertag: "Brimstone",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/valorant4.png?updatedAt=1753125946404",
+        role: "Controller",
+      },
+      {
+        name: "Nathan Mascarenhas",
+        gamertag: "Omen",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/valorant5.png?updatedAt=1753125946026",
 
-    role: "Controller",
-  },
-  {
-    name: "Onkar Patil",
-    gamertag: "Jett",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/valorant6.png?updatedAt=1753125946100",
-    role: "Duelist",
-  },
-  {
-    name: "Haisikesh Awate",
-    gamertag: "Killjoy",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/valorant7.png?updatedAt=1753125946155",
-    role: "Sentinel",
-  },
-  {
-    name: "Bhavin Kotwani",
-    gamertag: "Fade",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/valorant8.png?updatedAt=1753125946188",
-    role: "Initiator",
-  },
-  
-],
-  BGMI: [
-  {
-    name: "Mohammad Raja",
-    gamertag: "Scout",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi1.png?updatedAt=1753125932480",
-    role: "IGL",
-  },
-  {
-    name: "Manpreet Singh ",
-    gamertag: "Hunter",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi2.png?updatedAt=1753125932551",
-    role: "Fragger",
-  },
-  {
-    name: "Nakul Sharma",
-    gamertag: "Medic1",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi3.png?updatedAt=1753125932668",
-    role: "Support",
-  },
-  {
-    name: "Saumay Anand",
-    gamertag: "Sniper1",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi4.png?updatedAt=1753125932049",
-    role: "Long Range",
-  },
-  {
-    name: "Shubham Chawla",
-    gamertag: "Medic2",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi5.png?updatedAt=1753125932483",
-    role: "Support",
-  },
-  {
-    name: "Rahul",
-    gamertag: "Sniper2",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi6.png?updatedAt=1753125932461",
-    role: "Long Range",
-  },
-  {
-    name: "Siddhant Joshi",
-    gamertag: "Medic3",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi7.png?updatedAt=1753125932446",
-    role: "Support",
-  },
-  {
-    name: "Mahammed Kafi Khan",
-    gamertag: "Sniper3",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi8.png?updatedAt=1753125932438",
-    role: "Long Range",
-  },
-],
+        role: "Controller",
+      },
+      {
+        name: "Onkar Patil",
+        gamertag: "Jett",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/valorant6.png?updatedAt=1753125946100",
+        role: "Duelist",
+      },
+      {
+        name: "Haisikesh Awate",
+        gamertag: "Killjoy",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/valorant7.png?updatedAt=1753125946155",
+        role: "Sentinel",
+      },
+      {
+        name: "Bhavin Kotwani",
+        gamertag: "Fade",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/valorant8.png?updatedAt=1753125946188",
+        role: "Initiator",
+      },
+    ],
+    BGMI: [
+      {
+        name: "Mohammad Raja",
+        gamertag: "Scout",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi1.png?updatedAt=1753125932480",
+        role: "IGL",
+      },
+      {
+        name: "Manpreet Singh ",
+        gamertag: "Hunter",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi2.png?updatedAt=1753125932551",
+        role: "Fragger",
+      },
+      {
+        name: "Nakul Sharma",
+        gamertag: "Medic1",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi3.png?updatedAt=1753125932668",
+        role: "Support",
+      },
+      {
+        name: "Saumay Anand",
+        gamertag: "Sniper1",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi4.png?updatedAt=1753125932049",
+        role: "Long Range",
+      },
+      {
+        name: "Shubham Chawla",
+        gamertag: "Medic2",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi5.png?updatedAt=1753125932483",
+        role: "Support",
+      },
+      {
+        name: "Rahul",
+        gamertag: "Sniper2",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi6.png?updatedAt=1753125932461",
+        role: "Long Range",
+      },
+      {
+        name: "Siddhant Joshi",
+        gamertag: "Medic3",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi7.png?updatedAt=1753125932446",
+        role: "Support",
+      },
+      {
+        name: "Mahammed Kafi Khan",
+        gamertag: "Sniper3",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/bgmi8.png?updatedAt=1753125932438",
+        role: "Long Range",
+      },
+    ],
 
-POKEMON_UNITE: [
-  {
-    name: "Manmohan Singh",
-    gamertag: "Pikachu",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/pokemon1.png?updatedAt=1753125941218",
-    role: "Attacker",
-  },
-  {
-    name: "Deep Patel",
-    gamertag: "Lucario",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/pokemon2.png?updatedAt=1753125941525",
-    role: "All-Rounder",
-  },
-  {
-    name: "Rudra Narayan Nayak",
-    gamertag: "Eldegoss1",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/pokemon3.png?updatedAt=1753125941703",
-    role: "Supporter",
-  },
-  {
-    name: "Rahul Lavhate",
-    gamertag: "Eldegoss2",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/pokemon4.png?updatedAt=1753125941981",
-    role: "Supporter",
-  },
-  {
-    name: "Adnan Badshah",
-    gamertag: "Eldegoss3",
-    image: "https://ik.imagekit.io/Prahlad2002/S8UL/pokemon5.png?updatedAt=1753125942233",
-    role: "Supporter",
-  },
-],
-
-
-};
-
-
- 
+    POKEMON_UNITE: [
+      {
+        name: "Manmohan Singh",
+        gamertag: "Pikachu",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/pokemon1.png?updatedAt=1753125941218",
+        role: "Attacker",
+      },
+      {
+        name: "Deep Patel",
+        gamertag: "Lucario",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/pokemon2.png?updatedAt=1753125941525",
+        role: "All-Rounder",
+      },
+      {
+        name: "Rudra Narayan Nayak",
+        gamertag: "Eldegoss1",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/pokemon3.png?updatedAt=1753125941703",
+        role: "Supporter",
+      },
+      {
+        name: "Rahul Lavhate",
+        gamertag: "Eldegoss2",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/pokemon4.png?updatedAt=1753125941981",
+        role: "Supporter",
+      },
+      {
+        name: "Adnan Badshah",
+        gamertag: "Eldegoss3",
+        image:
+          "https://ik.imagekit.io/Prahlad2002/S8UL/pokemon5.png?updatedAt=1753125942233",
+        role: "Supporter",
+      },
+    ],
+  };
 
   return (
     <section
@@ -280,11 +295,7 @@ POKEMON_UNITE: [
 
                 {/* Gamertag Display */}
                 <div className="absolute bottom-4 left-4 right-4">
-                  <div className="transform -rotate-90 origin-bottom-left absolute -left-2 -bottom-2">
-                    {/* <h3 className="text-2xl font-black text-white tracking-wider">
-                      {player.gamertag}
-                    </h3> */}
-                  </div>
+                  <div className="transform -rotate-90 origin-bottom-left absolute -left-2 -bottom-2"></div>
                 </div>
               </div>
 
@@ -308,7 +319,7 @@ POKEMON_UNITE: [
         </div>
 
         {/* Enhanced Team Stats */}
-        <Countup/>
+        <Countup />
       </div>
     </section>
   );

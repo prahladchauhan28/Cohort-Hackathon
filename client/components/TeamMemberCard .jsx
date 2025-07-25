@@ -1,4 +1,3 @@
-
 import { Linkedin, Instagram, X } from "lucide-react";
 
 const TeamMemberCard = ({
@@ -64,11 +63,15 @@ const TeamMemberCard = ({
         </div>
 
         {/* Stats section */}
-        <div    style={{ display: 'flex', justifyContent: 'space-around', marginTop: '1rem' }} 
-        className="grid mt-2 mb-20 text-center overflow-y-auto max-h-70 pr-2 text-white scrollbar-hide hover:scroll-auto">
-          <p className="">
-            {words}
-          </p>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            marginTop: "1rem",
+          }}
+          className="grid mt-2 mb-20 text-center overflow-y-auto max-h-70 pr-2 text-white scrollbar-hide hover:scroll-auto"
+        >
+          <p className="">{words}</p>
         </div>
       </div>
     </div>
